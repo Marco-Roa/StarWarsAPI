@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
+#import "SWObject.h"
 
-@interface WebServices : NSObject
+@interface WebServices : NSObject<NSURLSessionDelegate>
+
++ (void)getPeople:(void (^)(NSMutableArray<SWObject> *teams)) handler;
 
 @end

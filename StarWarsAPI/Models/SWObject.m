@@ -1,14 +1,13 @@
 //
-//  Constants.h
+//  SWObject.m
 //  StarWarsAPI
 //
 //  Created by Marco Antonio Roa De La Cruz on 11/8/17.
 //  Copyright © 2017 MarcoRoa. All rights reserved.
 //
 
-#ifndef Constants_h
-#define Constants_h
+#import "SWObject.h"
 
-#define nURLStarwarsAPI @"https://swapi.co/api/"
+@implementation SWObject
 
-#endif /* Constants_h */
+@end
