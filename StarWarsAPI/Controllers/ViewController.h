@@ -12,6 +12,7 @@
 
 @interface ViewController : UIViewController
 - (IBAction)btnRefreshPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnRefresh;
 @property (strong, nonatomic) IBOutlet UILabel *lblName;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SWCell.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) NSMutableArray *people;
@@ -23,7 +24,8 @@ int indexPerson = 0;
     
     _people = [[NSMutableArray alloc] init];
     [self getPeople];
-    [self getPerson];
+    //[self getPerson];
+    
 }
 
 
@@ -36,6 +38,8 @@ int indexPerson = 0;
 #pragma mark                            Data methods
 //********************************************************************************************
 - (void)getPeople{
+    
+    NSLog(@"PMK - getPeople");
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [WebServices getPeople:^(NSMutableArray<SWObject> *people) {
         
@@ -47,9 +51,12 @@ int indexPerson = 0;
             NSString *name = person.name;
             
             NSLog(@"print name : %@", name);
-            self.lblName.text = name;
-            self.lblName.adjustsFontSizeToFitWidth = YES;
-            indexPerson++;
+            //self.lblName.text = name;
+            //self.lblName.adjustsFontSizeToFitWidth = YES;
+            //indexPerson++;
+            
+            self.tableView.reloadData;
+            
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }];
@@ -62,9 +69,6 @@ int indexPerson = 0;
             [_people removeAllObjects];
             [_people addObjectsFromArray:people];
             
-            SWObject *person = [people objectAtIndex:indexPerson];
-            NSString *name = person.name;
-            
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }];
@@ -73,13 +77,55 @@ int indexPerson = 0;
 //********************************************************************************************
 #pragma mark                            Action methods
 //********************************************************************************************
-- (IBAction)btnUpdatePressed:(id)sender {
-    [self getPeople];
-}
 
 
 - (IBAction)btnRefreshPressed:(id)sender
 {
     [self getPeople];
+}
+
+
+
+#pragma mark - Table source and delegate methods
+/**********************************************************************************************/
+- (NSInteger)numberOfSectionsInTableView:(UIView *)tableView {
+    return 1;
+}
+//-------------------------------------------------------------------------------
+- (NSInteger)tableView:(UIView *)tableView numberOfRowsInSection:(NSInteger)section {
+   // [self getPeople];
+    
+    NSLog(@"PMK - people.count table view: %li", _people.count);
+    return _people.count;
+    //return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 64;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //[self getPeople];
+    
+    SWCell *cell = (SWCell *)[tableView dequeueReusableCellWithIdentifier:@"SWCell"];
+    
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"SWCell" bundle:nil] forCellReuseIdentifier:@"SWCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"SWCell"];
+    }
+    
+    //VersusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VersusCell" forIndexPath:indexPath];
+    
+    //cell.team1Label.text = @"test";
+    
+    SWObject *person = [_people objectAtIndex:indexPath.row];
+    NSString *name = person.name;
+
+    NSLog(@"PMK - name : %@", name);
+    
+    cell.lblName.text = name;
+    
+    return cell;
 }
 @end

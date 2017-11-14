@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F09A6FE722B2949332AA037B /* libPods-StarWarsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFD3BF31BCD3655E5ABB2DF /* libPods-StarWarsAPI.a */; };
+		F465457D1FBA884E00ECC857 /* SWCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F465457B1FBA884E00ECC857 /* SWCell.m */; };
+		F465457E1FBA884E00ECC857 /* SWCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F465457C1FBA884E00ECC857 /* SWCell.xib */; };
 		F4EC00C91FB3D7F90006995C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC00C81FB3D7F90006995C /* AppDelegate.m */; };
 		F4EC00CC1FB3D7F90006995C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC00CB1FB3D7F90006995C /* ViewController.m */; };
 		F4EC00CF1FB3D7F90006995C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC00CD1FB3D7F90006995C /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 		224724EE3B1B861DA191BAB8 /* Pods-StarWarsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsAPI/Pods-StarWarsAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		9DBF016FB2FF1F31D2900281 /* Pods-StarWarsAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsAPI/Pods-StarWarsAPI.release.xcconfig"; sourceTree = "<group>"; };
 		CDFD3BF31BCD3655E5ABB2DF /* libPods-StarWarsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarWarsAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F465457A1FBA884E00ECC857 /* SWCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCell.h; sourceTree = "<group>"; };
+		F465457B1FBA884E00ECC857 /* SWCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCell.m; sourceTree = "<group>"; };
+		F465457C1FBA884E00ECC857 /* SWCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWCell.xib; sourceTree = "<group>"; };
 		F4EC00C41FB3D7F90006995C /* StarWarsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EC00C71FB3D7F90006995C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4EC00C81FB3D7F90006995C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +80,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F46545791FBA883500ECC857 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F465457A1FBA884E00ECC857 /* SWCell.h */,
+				F465457B1FBA884E00ECC857 /* SWCell.m */,
+				F465457C1FBA884E00ECC857 /* SWCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F4EC00BB1FB3D7F90006995C = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +112,7 @@
 		F4EC00C61FB3D7F90006995C /* StarWarsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F46545791FBA883500ECC857 /* Cells */,
 				F4EC00EB1FB3D9680006995C /* Models */,
 				F4EC00E31FB3D9060006995C /* Helpers */,
 				F4EC00E21FB3D89E0006995C /* Controllers */,
@@ -207,6 +223,7 @@
 				F4EC00D41FB3D7F90006995C /* Assets.xcassets in Resources */,
 				F4EC00E11FB3D8170006995C /* Podfile in Resources */,
 				F4EC00CF1FB3D7F90006995C /* Main.storyboard in Resources */,
+				F465457E1FBA884E00ECC857 /* SWCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +290,7 @@
 				F4EC00EA1FB3D95B0006995C /* Declarations.m in Sources */,
 				F4EC00CC1FB3D7F90006995C /* ViewController.m in Sources */,
 				F4EC00DA1FB3D7F90006995C /* main.m in Sources */,
+				F465457D1FBA884E00ECC857 /* SWCell.m in Sources */,
 				F4EC00C91FB3D7F90006995C /* AppDelegate.m in Sources */,
 				F4EC00EE1FB3DB880006995C /* SWObject.m in Sources */,
 			);
