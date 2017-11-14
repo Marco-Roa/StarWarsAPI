@@ -14,8 +14,15 @@
 - (IBAction)btnRefreshPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) IBOutlet UIButton *btnRefresh;
-@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *heightLabel;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *massLabel;
+@property (strong, nonatomic) IBOutlet UILabel *hairLabel;
+@property (strong, nonatomic) IBOutlet UILabel *skinLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eyeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *birthLabel;
+@property (strong, nonatomic) IBOutlet UILabel *worldLabel;
+
 
 @end
 

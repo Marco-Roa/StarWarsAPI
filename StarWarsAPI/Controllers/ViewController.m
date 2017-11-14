@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailsViewController.h"
 #import "SWCell.h"
 
 @interface ViewController ()
@@ -14,7 +15,7 @@
 
 @end
 
-int indexPerson = 0;
+NSInteger objectIndex = 0;
 
 @implementation ViewController
 
@@ -47,16 +48,15 @@ int indexPerson = 0;
             [_people removeAllObjects];
             [_people addObjectsFromArray:people];
             
-            SWObject *person = [people objectAtIndex:indexPerson];
-            NSString *name = person.name;
+            //SWObject *person = [people objectAtIndex:indexPerson];
+            //NSString *name = person.name;
             
-            NSLog(@"print name : %@", name);
+            NSLog(@"Data arrived, refreshing...");
             //self.lblName.text = name;
             //self.lblName.adjustsFontSizeToFitWidth = YES;
             //indexPerson++;
             
-            self.tableView.reloadData;
-            
+            [self.tableView reloadData];
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }];
@@ -128,4 +128,30 @@ int indexPerson = 0;
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    objectIndex = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"detailSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    
+    if ([[segue identifier] isEqualToString:@"detailSegue"])
+    {
+        //if you need to pass data to the next controller do it here
+        
+        DetailsViewController *vc = [segue destinationViewController];
+        SWObject *person = [_people objectAtIndex:objectIndex];
+        
+        vc.detailObject = person;
+    }
+    
+}
+
 @end

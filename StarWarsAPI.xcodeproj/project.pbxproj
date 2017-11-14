@@ -10,6 +10,7 @@
 		F09A6FE722B2949332AA037B /* libPods-StarWarsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFD3BF31BCD3655E5ABB2DF /* libPods-StarWarsAPI.a */; };
 		F465457D1FBA884E00ECC857 /* SWCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F465457B1FBA884E00ECC857 /* SWCell.m */; };
 		F465457E1FBA884E00ECC857 /* SWCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F465457C1FBA884E00ECC857 /* SWCell.xib */; };
+		F46545811FBA948E00ECC857 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46545801FBA948E00ECC857 /* DetailsViewController.m */; };
 		F4EC00C91FB3D7F90006995C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC00C81FB3D7F90006995C /* AppDelegate.m */; };
 		F4EC00CC1FB3D7F90006995C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC00CB1FB3D7F90006995C /* ViewController.m */; };
 		F4EC00CF1FB3D7F90006995C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC00CD1FB3D7F90006995C /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 		F465457A1FBA884E00ECC857 /* SWCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCell.h; sourceTree = "<group>"; };
 		F465457B1FBA884E00ECC857 /* SWCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCell.m; sourceTree = "<group>"; };
 		F465457C1FBA884E00ECC857 /* SWCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWCell.xib; sourceTree = "<group>"; };
+		F465457F1FBA948E00ECC857 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F46545801FBA948E00ECC857 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		F4EC00C41FB3D7F90006995C /* StarWarsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EC00C71FB3D7F90006995C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4EC00C81FB3D7F90006995C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			children = (
 				F4EC00CA1FB3D7F90006995C /* ViewController.h */,
 				F4EC00CB1FB3D7F90006995C /* ViewController.m */,
+				F465457F1FBA948E00ECC857 /* DetailsViewController.h */,
+				F46545801FBA948E00ECC857 /* DetailsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				F4EC00CC1FB3D7F90006995C /* ViewController.m in Sources */,
 				F4EC00DA1FB3D7F90006995C /* main.m in Sources */,
 				F465457D1FBA884E00ECC857 /* SWCell.m in Sources */,
+				F46545811FBA948E00ECC857 /* DetailsViewController.m in Sources */,
 				F4EC00C91FB3D7F90006995C /* AppDelegate.m in Sources */,
 				F4EC00EE1FB3DB880006995C /* SWObject.m in Sources */,
 			);
