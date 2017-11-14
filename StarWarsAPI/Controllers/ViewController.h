@@ -22,6 +22,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *eyeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *birthLabel;
 @property (strong, nonatomic) IBOutlet UILabel *worldLabel;
+@property (strong, nonatomic) IBOutlet UITextView *vehicleTextView;
+@property (strong, nonatomic) IBOutlet UITextView *starshipsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *filmsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *speciesTextView;
+
 
 
 @end
